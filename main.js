@@ -3,19 +3,20 @@
     ns.graphSort = function(w) {
 
         w.on('beforeviewloaded', function(w, args) {
-        	var series = args.options.series,
-        		categories = [], axis;
 
-        	if (_.isArray(series)) {
-        		_.each(series[0].data, function(node, i) {
-        			var obj = {
-        				name: node.selectionData[0],
-        				index: node.queryResultIndex,
-        				stackTotal: node.y
+            var series = args.options.series,
+                categories = [], axis;
+
+            if (_.isArray(series)) {
+                _.each(series[0].data, function(node, i) {
+                    var obj = {
+                        name: node.selectionData[0],
+                        index: node.queryResultIndex,
+                        stackTotal: node.y
         			};
-        			categories.push(obj);
+                    categories.push(obj);
         		});
-        	}
+            }
 
         	categories.sort(function(a, b) {
         		var aName = a.name.toLowerCase(),
