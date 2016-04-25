@@ -6,8 +6,9 @@
                 categories = [], axis;
 
             if (_.isArray(series)) {
-                _.each(series[0].data, function(node, i) {
-                    var obj = {
+                _.each(series[0].data, function(node) {
+                    var obj =
+                    {
                         name: node.selectionData[0],
                         index: node.queryResultIndex,
                         stackTotal: node.y
