@@ -1,0 +1,7 @@
+{
+	name: "labelTruncate",
+	source: [
+        "main.js"
+    ],
+    style: []
+}
