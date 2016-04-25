@@ -7,11 +7,6 @@
         		categories = [], axis;
 
         	if (_.isArray(series)) {
-
-        		var ser = $.grep(series[0], function(ser, seriesIndex) {
-        			return ser.visible;
-        		});
-
         		_.each(series[0].data, function(node, i) {
         			var obj = {
         				name: node.selectionData[0],
